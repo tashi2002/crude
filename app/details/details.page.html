@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content><ion-header>
+  <ion-toolbar>
+    <ion-title>details</ion-title>
+    
+      <ion-back-button slot="start"></ion-back-button>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table border="1">
+    <thead>
+        <tr>
+          <th>si.no</th>
+          <th>Day</th>
+          <th>Activities</th>
+          <th>Timer</th>
+          <th colspan="2">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let item of items">
+            <td>{{item.sino}}</td>
+            <td>{{item.dayy}}</td>
+            <td>{{item.activities}}</td>
+            <td>{{item.timer}}</td>
+
+            <td>
+            <a>
+              <ion-icon name="create" slot="icon-only" (click)="onEdit(item.id)"></ion-icon>
+            </a>
+          </td>
+
+          <td>
+            <a>
+              <ion-icon name="trash" slot="icon-only" (click)="delete(item.id)"></ion-icon>
+            </a>
+          </td>
+          </tr>
+          </tbody>
+  </table>
+  <ion-button routerLink="/search">New</ion-button>
+</ion-content>
+
+
+</ion-content>

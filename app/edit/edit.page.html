@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>edit</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div *ngIf="!isloading">
+    <form [formGroup]="form">
+     
+  
+
+  <ion-item>
+    <ion-label>Day</ion-label>
+    <ion-input type="text"
+    formControlName="dayy"></ion-input>
+  </ion-item>
+
+ 
+
+  <ion-item>
+    <ion-label>Activities</ion-label>
+    <ion-input type="text"
+    formControlName="activities"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Time</ion-label>
+    <ion-input type="time"
+    formControlName="timer"></ion-input>
+  </ion-item>
+ </form>
+</div>
+<ion-button (click)="onUpdateItem()" class="edit">UPDATE</ion-button>
+</ion-content>

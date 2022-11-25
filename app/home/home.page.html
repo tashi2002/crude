@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-text class="ion-padding" color="success">Add to task</ion-text>
+<ion-card>
+<ion-card-content>
+ <form [formGroup]="form">
+
+  <ion-item>
+    <ion-label>SI.NO</ion-label>
+    <ion-input type="text"
+    formControlName="sino"></ion-input>
+    <small *ngIf=""></small>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Day</ion-label>
+    <ion-input type="text"
+    formControlName="dayy"></ion-input>
+  </ion-item>
+
+ 
+
+  <ion-item>
+    <ion-label>Activities</ion-label>
+    <ion-input type="text"
+    formControlName="activities"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Time</ion-label>
+    <ion-input type="time"
+    formControlName="timer"></ion-input>
+  </ion-item>
+ </form>
+
+</ion-card-content>
+</ion-card>
+<ion-button (click)="onCreate()">Add</ion-button>
+<ion-card>
+  <ion-label>Task added</ion-label>
+  <ion-item *ngFor="let item of array" >
+    <ion-label>{{item}}</ion-label>
+  </ion-item>
+</ion-card>
+</ion-content>
